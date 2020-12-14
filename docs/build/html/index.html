@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenidos a la documentanción del Semestral de Tópicos &#8212; Topicos 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="bienvenidos-a-la-documentancion-del-semestral-de-topicos">
+<h1>Bienvenidos a la documentanción del <strong>Semestral de Tópicos</strong><a class="headerlink" href="#bienvenidos-a-la-documentancion-del-semestral-de-topicos" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="module-main">
+<span id="main-file"></span><h2>Main File<a class="headerlink" href="#module-main" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="main.App">
+<em class="property">class </em><code class="sig-prename descclassname">main.</code><code class="sig-name descname">App</code><a class="headerlink" href="#main.App" title="Permalink to this definition">¶</a></dt>
+<dd><p>Se encarga de la configuración general e inicializaciónde la interfaz de usuario (QMainWindow)</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="main.WindowContainter">
+<em class="property">class </em><code class="sig-prename descclassname">main.</code><code class="sig-name descname">WindowContainter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.WindowContainter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Genera todo el esqueleto de Tabs de la UI, adicionalmente, alberga todos
+los metodos para el procesamiento de imágenes y obtención del archivo a manipular</p>
+<dl class="py method">
+<dt id="main.WindowContainter.detect_face">
+<code class="sig-name descname">detect_face</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.WindowContainter.detect_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>Genera y guarda una imagen con la cara identificada en el Tabs Face Dectection.
+:param name: self - default param.
+:returns: no explicit returns - display and generate an image (face_figure).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="main.WindowContainter.get_array_image">
+<code class="sig-name descname">get_array_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.WindowContainter.get_array_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convierte la imagen en una matrix Numpy
+:param name: self - default param.
+:returns: image_array - np.array.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="main.WindowContainter.get_ax_size">
+<code class="sig-name descname">get_ax_size</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ax</span></em>, <em class="sig-param"><span class="n">fig</span></em><span class="sig-paren">)</span><a class="headerlink" href="#main.WindowContainter.get_ax_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calcula el tamaño de un ax de una figura dada
+:param name: self - default param.
+:param name: ax - ax (Matplotlib).
+:param name: fig - Figure (Matplotlib).
+:returns: width, height - tuple.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="main.WindowContainter.get_file_image">
+<code class="sig-name descname">get_file_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.WindowContainter.get_file_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtiene la ruta del archivo seleccionado en el explorador de directorios.
+:param name: self - default param.
+:returns: no explicit returns - assign self.input_text (str).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="main.WindowContainter.on_click">
+<code class="sig-name descname">on_click</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.WindowContainter.on_click" title="Permalink to this definition">¶</a></dt>
+<dd><p>Permite la navegación entre tabs
+:param name: self - default param.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="main.WindowContainter.show_colors_image">
+<code class="sig-name descname">show_colors_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.WindowContainter.show_colors_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Genera 6 imagenes con los respectivos colores primarios y secundarios en el Tabs Colores.
+:param name: self - default param.
+:returns: no explicit returns - generate a figure of six images (color_figure).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="main.WindowContainter.show_images">
+<code class="sig-name descname">show_images</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.WindowContainter.show_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Muestra la imagen original seleccionada en la UI y ejecuta los metodos de procesamiento.
+:param name: self - default param.
+:returns: no explicit returns - generate pixmap for image (QLabel).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="main.WindowContainter.show_poolings_image">
+<code class="sig-name descname">show_poolings_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#main.WindowContainter.show_poolings_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Genera 4 imagenes con diferentes grados de agrupación (pooling) en el Tabs Pooling.
+:param name: self - default param.
+:returns: no explicit returns - generate a figure of four images (pooling_figure).</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Topicos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, TomasRequenaB.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
